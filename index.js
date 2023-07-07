@@ -56,5 +56,50 @@ const playGame = () => {
     landing.classList.add("hidden");
     game.classList.remove("hidden");
   });
+
+  buttonMore.addEventListener("click", function () {
+    card2.textContent = randomCardCompare;
+    if (
+      deckToPlay.indexOf(randomCard) >= deckToPlay.indexOf(randomCardCompare)
+    ) {
+      gameLost.classList.remove("hidden");
+      gameText.classList.add("hidden");
+    }
+    if (
+      deckToPlay.indexOf(randomCard) < deckToPlay.indexOf(randomCardCompare)
+    ) {
+      gameWon.classList.remove("hidden");
+      gameText.classList.add("hidden");
+    } else if (
+      deckToPlay.indexOf(randomCard) === deckToPlay.indexOf(randomCardCompare)
+    ) {
+      gameLost.classList.remove("hidden");
+      gameText.classList.add("hidden");
+    }
+    setTimeout(initiateGame, 4000);
+  });
+
+  buttonLess.addEventListener("click", function () {
+    card2.textContent = randomCardCompare;
+
+    if (
+      deckToPlay.indexOf(randomCard) <= deckToPlay.indexOf(randomCardCompare)
+    ) {
+      gameLost.classList.remove("hidden");
+      gameText.classList.add("hidden");
+    }
+    if (
+      deckToPlay.indexOf(randomCard) > deckToPlay.indexOf(randomCardCompare)
+    ) {
+      gameWon.classList.remove("hidden");
+      gameText.classList.add("hidden");
+    } else if (
+      deckToPlay.indexOf(randomCard) === deckToPlay.indexOf(randomCardCompare)
+    ) {
+      gameLost.classList.remove("hidden");
+      gameText.classList.add("hidden");
+    }
+    setTimeout(initiateGame, 4000);
+  });
 };
 playGame();
