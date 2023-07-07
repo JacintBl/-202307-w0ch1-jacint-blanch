@@ -1,3 +1,16 @@
+const buttonInitiate = document.querySelector(".buttonInitiate");
+const landing = document.querySelector(".landing");
+const game = document.querySelector(".game");
+const gameText = document.querySelector(".gameText");
+
+const gameWon = document.querySelector(".gameWon");
+const gameLost = document.querySelector(".gameLost");
+
+const buttonMore = document.querySelector(".buttonMore");
+const buttonLess = document.querySelector(".buttonLess");
+const card1 = document.querySelector(".card1");
+const card2 = document.querySelector(".card2");
+
 const deckCards = () => {
   const cardSuit = ["♥️", "♠️", "♦️", "♣️"];
   const cardValue = [
