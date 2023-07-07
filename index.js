@@ -51,6 +51,17 @@ const playGame = () => {
   const deckToPlay = deckCards();
   let randomCard = pickRandomCard(deckToPlay);
 
+  const initiateGame = () => {
+    card1.textContent = randomCard;
+    card2.textContent = "Your Card";
+    randomCard = pickRandomCard(deckToPlay);
+    randomCardCompare = pickRandomCard(deckToPlay);
+
+    gameLost.classList.add("hidden");
+    gameWon.classList.add("hidden");
+    gameText.classList.remove("hidden");
+  };
+
   buttonInitiate.addEventListener("click", function () {
     card1.textContent = randomCard;
     landing.classList.add("hidden");
