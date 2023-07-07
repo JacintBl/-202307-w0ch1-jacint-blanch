@@ -14,7 +14,6 @@ const card2 = document.querySelector(".card2");
 const deckCards = () => {
   const cardSuit = ["♥️", "♠️", "♦️", "♣️"];
   const cardValue = [
-    "A",
     "2",
     "3",
     "4",
@@ -27,6 +26,7 @@ const deckCards = () => {
     "J",
     "Q",
     "K",
+    "A",
   ];
 
   let deck = [];
