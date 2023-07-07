@@ -26,3 +26,10 @@ const deckCards = () => {
 
   return deck;
 };
+
+const pickRandomCard = (deck) => {
+  const randomValue = Math.floor(Math.random() * deck.length);
+  const randomCard = `${deck[randomValue]}`;
+
+  return randomCard;
+};
