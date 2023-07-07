@@ -33,3 +33,15 @@ const pickRandomCard = (deck) => {
 
   return randomCard;
 };
+
+const playGame = () => {
+  const deckToPlay = deckCards();
+  let randomCard = pickRandomCard(deckToPlay);
+
+  buttonInitiate.addEventListener("click", function () {
+    card1.textContent = randomCard;
+    landing.classList.add("hidden");
+    game.classList.remove("hidden");
+  });
+};
+playGame();
