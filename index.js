@@ -76,16 +76,10 @@ const playGame = () => {
     ) {
       gameLost.classList.remove("hidden");
       gameText.classList.add("hidden");
-    }
-    if (
+    } else if (
       deckToPlay.indexOf(randomCard) < deckToPlay.indexOf(randomCardCompare)
     ) {
       gameWon.classList.remove("hidden");
-      gameText.classList.add("hidden");
-    } else if (
-      deckToPlay.indexOf(randomCard) === deckToPlay.indexOf(randomCardCompare)
-    ) {
-      gameLost.classList.remove("hidden");
       gameText.classList.add("hidden");
     }
     setTimeout(initiateGame, 4000);
@@ -99,16 +93,10 @@ const playGame = () => {
     ) {
       gameLost.classList.remove("hidden");
       gameText.classList.add("hidden");
-    }
-    if (
+    } else if (
       deckToPlay.indexOf(randomCard) > deckToPlay.indexOf(randomCardCompare)
     ) {
       gameWon.classList.remove("hidden");
-      gameText.classList.add("hidden");
-    } else if (
-      deckToPlay.indexOf(randomCard) === deckToPlay.indexOf(randomCardCompare)
-    ) {
-      gameLost.classList.remove("hidden");
       gameText.classList.add("hidden");
     }
     setTimeout(initiateGame, 4000);
