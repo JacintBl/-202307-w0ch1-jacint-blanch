@@ -39,6 +39,7 @@ const deckCards = () => {
 
   return deck;
 };
+// console.log(deckCards);
 
 const pickRandomCard = (deck) => {
   const randomValue = Math.floor(Math.random() * deck.length);
@@ -50,7 +51,7 @@ const pickRandomCard = (deck) => {
 const playGame = () => {
   const deckToPlay = deckCards();
   let randomCard = pickRandomCard(deckToPlay);
-
+  let randomCardCompare = pickRandomCard(deckToPlay);
   const initiateGame = () => {
     card1.textContent = randomCard;
     card2.textContent = "Your Card";
@@ -113,4 +114,5 @@ const playGame = () => {
     setTimeout(initiateGame, 4000);
   });
 };
+
 playGame();
